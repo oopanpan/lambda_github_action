@@ -1,4 +1,4 @@
-import * as _ from 'lodash';
+const _ = require('lodash');
 
 exports.handler = async (event) => {
     const max = 10;
