@@ -1,6 +1,6 @@
 import * as _ from 'lodash';
 
-export const handler = async () => {
+exports.handler = async (event) => {
     const max = 10;
     const val = _.random(max);
     const response = {
