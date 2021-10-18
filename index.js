@@ -1,11 +1,11 @@
 const _ = require('lodash');
 
 exports.handler = async (event) => {
-    const max = 10;
+    const max = 999;
     const val = _.random(max);
     const response = {
 		statusCode: 200,
-		body: `The random value (max: ${max}) is: ${val}`,
-	};
+		body: JSON.stringify({'message': `The random value smaller than ${max} is: ${val}`})
+    };
     return response;
 }
