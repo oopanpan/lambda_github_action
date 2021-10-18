@@ -1,4 +1,4 @@
-import * as _ from 'lodash';
+const _ = require('lodash')
 
 exports.handler = async (event) => {
     const max = 10;
@@ -7,6 +7,5 @@ exports.handler = async (event) => {
         statusCode: 200,
         body: `The random value (max: ${max}) is: ${val}`,
     }
-
     return response;
 }
