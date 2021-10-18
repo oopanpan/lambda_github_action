@@ -22,9 +22,9 @@ jobs:
     - name: npm install
       env:
         CI: true
-      run:
+      run: |
         npm ci
     - name: deploy
-      run: 
+      run: |
         zip -j deploy.zip ./index.js
         aws lambda update-function-code --function-name=lambda_github_action --zip-file=fileb://deploy.zip
